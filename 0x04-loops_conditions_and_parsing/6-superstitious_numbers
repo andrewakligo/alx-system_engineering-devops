@@ -1,19 +1,30 @@
 #!/usr/bin/env bash
-#Creating a script that uses case statements
-x=1
-while [ $x -le 20 ]
+# displays numbers from 1 to 20.
+
+COUNTER=1
+while [ $COUNTER -lt 21 ]
 do
-    echo "$x"
-    case $x in
-	4)
+    case $COUNTER in
+
+        4)
+	    echo $COUNTER
 	    echo "bad luck from China"
 	    ;;
+	
 	9)
+	    echo $COUNTER
 	    echo "bad luck from Japan"
 	    ;;
+	
 	17)
+	    echo $COUNTER
 	    echo "bad luck from Italy"
 	    ;;
+
+	*)
+	    echo $COUNTER
+	    ;;
     esac
-    ((x++))
+
+    let COUNTER+=1
 done

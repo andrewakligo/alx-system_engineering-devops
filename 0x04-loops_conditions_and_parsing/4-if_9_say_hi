@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
-#Creating a script that uses an if statement
-x=1
-while [ $x -le 10 ]
+# displays Best School 10 times.
+
+COUNTER=0
+while [ $COUNTER -lt 11 ]
 do
-    echo "Holberton School"
-    if [ $x -eq 9 ]
+    if [ $COUNTER = 9 ]
     then
-	echo "Hi"
+        echo "Hi"
+    else
+        echo "Best School"
     fi
-    ((x++))
+    let COUNTER+=1
 done
